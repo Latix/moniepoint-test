@@ -6,7 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Moniepoint Test</title>
 </head>
 <body>
@@ -101,6 +104,209 @@
                 </div>
             </div>
         </div>
+        <div class="main__content">
+            <div class="amount__stream">
+                <div class="amount__stream-balance">
+                    <h1 class="amount__stream-balance-title">Total Balance</h1>
+                    <div class="amount__stream-balance-amount">
+                        <p class="amount__stream-balance-amount-text">$36,254</p>
+                        <span class="arrow__badge">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <g><path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12.36 10.947l5.658 5.656-1.415 1.415-5.656-5.657-4.95 4.95V5.997H17.31z"/>
+                                </g>
+                            </svg>
+                        </span>
+                        <p class="amount__stream-balance-amount-info">$328.32</p>
+                        <p class="amount__stream-balance-amount-info">Today, Feb 15</p>
+                    </div>
+                </div>
+                <div class="amount__stream-analytics">
+                    <a href="#" class="amount__stream-analytics-data">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M1.181 12C2.121 6.88 6.608 3 12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9zM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-2a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </g>
+                        </svg>
+                        View Analytics
+                    </a>
+                    <span class="divider"></span>
+                    <a href="#" class="amount__stream-analytics-send">
+                        <svg class="feather feather-arrow-down-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="7" x2="17" y1="7" y2="17"/>
+                            <polyline points="17 7 17 17 7 17"/>
+                        </svg>
+                        Send Money
+                    </a>
+                    <a href="#" class="amount__stream-analytics-add">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                              <style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+                            </defs>
+                            <title/>
+                            <g id="plus">
+                              <line class="cls-1" x1="16" x2="16" y1="7" y2="25"/>
+                              <line class="cls-1" x1="7" x2="25" y1="16" y2="16"/>
+                            </g>
+                        </svg>
+                        Add Money
+                    </a>
+                    <a href="#" class="amount__stream-analytics-more">
+                        <svg id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                              <path d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"/>
+                              <path d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"/>
+                              <path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="overview">
+                <div class="overview__header">
+                    <h2 class="overview__header-title">Overview</h2>
+                    <p class="overview__header-date">Last 30 days</p>
+                </div>
+                <div class="overview__cards">
+                    <div class="overview__cards-item">
+                        <div class="close-chart">
+                            <svg id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <polygon points="352,115.4 331.3,96 160,256 331.3,416 352,396.7 201.5,256 "/>
+                            </svg>
+                        </div>
+                        <div class="overview__cards-item-content">
+                            <div class="overview__cards-item-header-icon">
+                                <svg enable-background="new 0 0 91 91" height="91px" id="Layer_1" version="1.1" viewBox="0 0 91 91" width="91px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g>
+                                      <g>
+                                        <path d="M53.971,19.4V3.438H12.442v84.904h58.517c4.412,0,8.023-3.613,8.023-8.027V27.428H61.998    C57.584,27.428,53.971,23.816,53.971,19.4z" fill="#cdd1dd"/>
+                                        <path d="M70.959,90.855H12.442c-1.388,0-2.513-1.125-2.513-2.514V3.438c0-1.388,1.125-2.513,2.513-2.513h41.528    c1.389,0,2.514,1.125,2.514,2.513V19.4c0,3.041,2.473,5.515,5.514,5.515h16.984c1.388,0,2.513,1.125,2.513,2.513v52.887    C81.495,86.126,76.769,90.855,70.959,90.855z M14.955,85.83h56.004c3.039,0,5.511-2.475,5.511-5.516V29.94H61.998    c-5.811,0-10.539-4.729-10.539-10.541V5.951H14.955V85.83z" fill="#cdd1dd"/>
+                                      </g>
+                                      <g>
+                                        <path d="M78.982,27.425L53.971,3.438V19.4c0,4.418,3.611,8.025,8.027,8.025H78.982z" fill="#cdd1dd"/>
+                                        <path d="M78.982,29.938H61.998c-5.812,0-10.539-4.727-10.539-10.538V3.438c0-1.007,0.601-1.916,1.526-2.311    c0.927-0.396,1.998-0.198,2.726,0.498l25.01,23.987c0.74,0.71,0.975,1.799,0.592,2.75C80.931,29.314,80.008,29.938,78.982,29.938z     M56.484,9.329V19.4c0,3.04,2.473,5.512,5.514,5.512h10.734L56.484,9.329z" fill="#cdd1dd"/>
+                                      </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="overview__cards-item-text">
+                                <p class="overview__cards-item-text-info">Business Account</p>
+                                <span class="arrow__badge">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <g><path d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12.36 10.947l5.658 5.656-1.415 1.415-5.656-5.657-4.95 4.95V5.997H17.31z"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <p class="overview__cards-item-text-info">12.3%</p>
+                                <p class="overview__cards-item-text-info">VS. Last Week</p>
+                            </div>
+                            <p class="overview__cards-item-amount">$33,842</p>
+                            <div class="overview__cards-item-details">
+                                <a href="#">View Account Details</a>
+                                <div class="overview__cards-item-details-icon">
+                                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M111.1 304C124.5 316.5 144.8 316.5 157.2 304L208 253.3l57.38 57.38C271.6 316.9 279.8 320 288 320s16.38-3.125 22.62-9.375l153.4-153.4c12.49-12.49 12.49-32.75 .0008-45.25c-12.5-12.5-32.76-12.5-45.25-.0018L288 242.8L230.6 185.4c-12.5-12.5-32.75-12.5-45.25 0L111.1 258.8C99.5 271.2 99.5 291.5 111.1 304zM480 416H64V63.1C64 46.33 49.67 32 32 32S0 46.33 0 63.1V448c0 17.6 14.4 32 32 32h448C497.7 480 512 465.7 512 448S497.7 416 480 416z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart__wrapper">
+                            <canvas id="stockChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="overview__cards-item">
+                        <div class="close-chart">
+                            <svg id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <polygon points="352,115.4 331.3,96 160,256 331.3,416 352,396.7 201.5,256 "/>
+                            </svg>
+                        </div>
+                        <div class="overview__cards-item-content">
+                            <div class="overview__cards-item-header-icon">
+                                <svg enable-background="new 0 0 91 91" height="91px" id="Layer_1" version="1.1" viewBox="0 0 91 91" width="91px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g>
+                                    <g>
+                                        <path d="M53.971,19.4V3.438H12.442v84.904h58.517c4.412,0,8.023-3.613,8.023-8.027V27.428H61.998    C57.584,27.428,53.971,23.816,53.971,19.4z" fill="#cdd1dd"/>
+                                        <path d="M70.959,90.855H12.442c-1.388,0-2.513-1.125-2.513-2.514V3.438c0-1.388,1.125-2.513,2.513-2.513h41.528    c1.389,0,2.514,1.125,2.514,2.513V19.4c0,3.041,2.473,5.515,5.514,5.515h16.984c1.388,0,2.513,1.125,2.513,2.513v52.887    C81.495,86.126,76.769,90.855,70.959,90.855z M14.955,85.83h56.004c3.039,0,5.511-2.475,5.511-5.516V29.94H61.998    c-5.811,0-10.539-4.729-10.539-10.541V5.951H14.955V85.83z" fill="#cdd1dd"/>
+                                    </g>
+                                    <g>
+                                        <path d="M78.982,27.425L53.971,3.438V19.4c0,4.418,3.611,8.025,8.027,8.025H78.982z" fill="#cdd1dd"/>
+                                        <path d="M78.982,29.938H61.998c-5.812,0-10.539-4.727-10.539-10.538V3.438c0-1.007,0.601-1.916,1.526-2.311    c0.927-0.396,1.998-0.198,2.726,0.498l25.01,23.987c0.74,0.71,0.975,1.799,0.592,2.75C80.931,29.314,80.008,29.938,78.982,29.938z     M56.484,9.329V19.4c0,3.04,2.473,5.512,5.514,5.512h10.734L56.484,9.329z" fill="#cdd1dd"/>
+                                    </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="overview__cards-item-text">
+                                <p class="overview__cards-item-text-info">Tax Reserve</p>
+                                <span class="arrow__badge">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <g><path d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12.36 10.947l5.658 5.656-1.415 1.415-5.656-5.657-4.95 4.95V5.997H17.31z"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <p class="overview__cards-item-text-info">12.3%</p>
+                                <p class="overview__cards-item-text-info">VS. Last Week</p>
+                            </div>
+                            <p class="overview__cards-item-amount">$700<span class="sub-amount">.00</span></p>
+                            <div class="overview__cards-item-details">
+                                <a href="#">Edit Tax Automation</a>
+                                <div class="overview__cards-item-details-icon">
+                                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M111.1 304C124.5 316.5 144.8 316.5 157.2 304L208 253.3l57.38 57.38C271.6 316.9 279.8 320 288 320s16.38-3.125 22.62-9.375l153.4-153.4c12.49-12.49 12.49-32.75 .0008-45.25c-12.5-12.5-32.76-12.5-45.25-.0018L288 242.8L230.6 185.4c-12.5-12.5-32.75-12.5-45.25 0L111.1 258.8C99.5 271.2 99.5 291.5 111.1 304zM480 416H64V63.1C64 46.33 49.67 32 32 32S0 46.33 0 63.1V448c0 17.6 14.4 32 32 32h448C497.7 480 512 465.7 512 448S497.7 416 480 416z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart__wrapper">
+                            <canvas id="stockChart2"></canvas>
+                        </div>
+                    </div>
+                    <div class="overview__cards-item">
+                        <div class="close-chart">
+                            <svg id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <polygon points="352,115.4 331.3,96 160,256 331.3,416 352,396.7 201.5,256 "/>
+                            </svg>
+                        </div>
+                        <div class="overview__cards-item-content">
+                            <div class="overview__cards-item-header-icon">
+                                <svg enable-background="new 0 0 91 91" height="91px" id="Layer_1" version="1.1" viewBox="0 0 91 91" width="91px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g>
+                                    <g>
+                                        <path d="M53.971,19.4V3.438H12.442v84.904h58.517c4.412,0,8.023-3.613,8.023-8.027V27.428H61.998    C57.584,27.428,53.971,23.816,53.971,19.4z" fill="#cdd1dd"/>
+                                        <path d="M70.959,90.855H12.442c-1.388,0-2.513-1.125-2.513-2.514V3.438c0-1.388,1.125-2.513,2.513-2.513h41.528    c1.389,0,2.514,1.125,2.514,2.513V19.4c0,3.041,2.473,5.515,5.514,5.515h16.984c1.388,0,2.513,1.125,2.513,2.513v52.887    C81.495,86.126,76.769,90.855,70.959,90.855z M14.955,85.83h56.004c3.039,0,5.511-2.475,5.511-5.516V29.94H61.998    c-5.811,0-10.539-4.729-10.539-10.541V5.951H14.955V85.83z" fill="#cdd1dd"/>
+                                    </g>
+                                    <g>
+                                        <path d="M78.982,27.425L53.971,3.438V19.4c0,4.418,3.611,8.025,8.027,8.025H78.982z" fill="#cdd1dd"/>
+                                        <path d="M78.982,29.938H61.998c-5.812,0-10.539-4.727-10.539-10.538V3.438c0-1.007,0.601-1.916,1.526-2.311    c0.927-0.396,1.998-0.198,2.726,0.498l25.01,23.987c0.74,0.71,0.975,1.799,0.592,2.75C80.931,29.314,80.008,29.938,78.982,29.938z     M56.484,9.329V19.4c0,3.04,2.473,5.512,5.514,5.512h10.734L56.484,9.329z" fill="#cdd1dd"/>
+                                    </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="overview__cards-item-text">
+                                <p class="overview__cards-item-text-info">Business Savings</p>
+                                <p class="overview__cards-item-text-info">VS. Last Week</p>
+                            </div>
+                            <p class="overview__cards-item-amount">$1,623</p>
+                            <div class="overview__cards-item-details">
+                                <a href="#">View Account Details</a>
+                                <div class="overview__cards-item-details-icon">
+                                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M111.1 304C124.5 316.5 144.8 316.5 157.2 304L208 253.3l57.38 57.38C271.6 316.9 279.8 320 288 320s16.38-3.125 22.62-9.375l153.4-153.4c12.49-12.49 12.49-32.75 .0008-45.25c-12.5-12.5-32.76-12.5-45.25-.0018L288 242.8L230.6 185.4c-12.5-12.5-32.75-12.5-45.25 0L111.1 258.8C99.5 271.2 99.5 291.5 111.1 304zM480 416H64V63.1C64 46.33 49.67 32 32 32S0 46.33 0 63.1V448c0 17.6 14.4 32 32 32h448C497.7 480 512 465.7 512 448S497.7 416 480 416z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart__wrapper">
+                            <canvas id="stockChart3"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="./assets/js/chart.js"></script>
+    <script src="./assets/js/utils.js"></script>
 </body>
 </html>
