@@ -924,15 +924,15 @@
 /* Keyframe animation */
 @keyframes wrapLine {
     from {
-      fill: black
+      fill: #cdd1dd;
     }
     to {
-      fill: black;
+      fill: #cdd1dd;
     }
 }
 @keyframes wrapLineHover {
     from {
-      fill: black
+      fill: #cdd1dd;
     }
     to {
       fill: #f2d6c3;
