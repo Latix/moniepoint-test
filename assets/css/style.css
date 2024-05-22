@@ -263,7 +263,21 @@
     display: flex;
     width: 700px;
     max-width: 700px;
-    border-bottom: 4px solid rgba(84, 53, 185, 0.4);
+    /* border-bottom: 4px solid rgba(84, 53, 185, 0.4); */
+}
+.overview__cards-item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+.overview__cards-item.show-chart::after  {
+    background-color: rgba(84, 53, 185, 0.4);
+    width: 95%;
+    left: 0;
 }
 .chart__wrapper {
     position: absolute;
@@ -614,7 +628,7 @@
     width: 100%;
     left: 0;
 }
-.transactions__wrapper-cash-money-item > h2 {
+.transactions__wrapper-cash-money-item h2 {
     font-family: 'Open Sans', sans-serif;
     display: inline-block;
     font-weight: 400;
@@ -629,14 +643,50 @@
     font-size: 20px;
     margin-top: 5px;
 }
-.transactions__wrapper-cash-money-item > h2,
+.transactions__wrapper-cash-money-item-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+}
+.transactions__wrapper-cash-money-item-content-icon {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+.transactions__wrapper-cash-money-item:hover .transactions__wrapper-cash-money-item-content-icon #arrowIcon {
+   animation: flipArrow 200ms linear;
+}
+.transactions__wrapper-cash-money-item .transactions__wrapper-cash-money-item-content-icon {
+    background: #b8bcc6;
+}
+.transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-content-icon {
+    background: #000;
+}
+.transactions__wrapper-cash-money-item-content-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+.transactions__wrapper-cash-money-item .transactions__wrapper-cash-money-item-content-icon svg {
+    transform: rotate(224deg);
+}
+.transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-content-icon svg {
+    transform: rotate(45deg);
+}
+.transactions__wrapper-cash-money-item-content-text {
+    display: flex;
+    flex-direction: column;
+}
+.transactions__wrapper-cash-money-item h2,
 .transactions__wrapper-cash-money-item-amount {
     color: #b8bcc6;
 }
 .transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-amount {
     color: #000;
 }
-.transactions__wrapper-cash-money-item.active > h2 {
+.transactions__wrapper-cash-money-item.active h2 {
     color: #000;
 }
 .transactions__wrapper-cash-money-stream {
@@ -729,6 +779,23 @@
     animation: loadProgressBarWire 1s forwards;
     height: 8px;
 }
+ .overview__cards-item-header-icon .business__savings #firstLayer,
+ .overview__cards-item-header-icon .business__savings #secondLayer {
+    transition: transform 300ms ease-in-out;
+}
+.overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon .business__savings #firstLayer {
+    fill: #ad90a7;
+    transform: translateY(40px);
+}
+.overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon .business__savings #secondLayer {
+    transform: translateY(20px);
+}
+.overview__cards-item:nth-of-type(1) .overview__cards-item-header-icon.business svg #layer1 {
+    transition: all 300ms ease-in-out;
+}
+.overview__cards-item:nth-of-type(1):hover .overview__cards-item-header-icon.business svg #layer1 {
+    fill: #5e2ff4;
+}
 @media(min-width: 1441px) {
     .overview {
         margin-left: auto;
@@ -754,7 +821,7 @@
       fill: black
     }
     to {
-      fill: orange;
+      fill: #f2d6c3;
     }
 }
 @keyframes slideInFromBottom {
@@ -832,5 +899,13 @@
     }
     to {
         width: 6%;
+    }
+}
+@keyframes flipArrow {
+    from {
+        transform: translate3d(-100%, -100%, -10px);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
     }
 }
