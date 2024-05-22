@@ -2,9 +2,17 @@ const cardChartIcons = document.querySelectorAll('.overview__cards-item-details-
 const closeChartIcons = document.querySelectorAll('.close-chart');
 const cashMoneyItems = document.querySelectorAll('.transactions__wrapper-cash-money-item');
 
+const closeOpenCharts = () => {
+    const overviewCardsItems = document.querySelectorAll('.overview__cards-item');
+    overviewCardsItems.forEach(overviewCardsItem => {
+        overviewCardsItem.classList.remove('show-chart');
+    });
+}
+
 cardChartIcons.forEach(cardChartIcon => {
     cardChartIcon.addEventListener('click', () => {
         const chartItem = cardChartIcon.parentElement.parentElement.parentElement;
+        closeOpenCharts();
         chartItem.classList.add('show-chart');
         //stockChart.update();
     });
