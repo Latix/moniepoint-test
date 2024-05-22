@@ -3,10 +3,10 @@ const ctx2 = document.getElementById('stockChart2').getContext('2d');
 const ctx3 = document.getElementById('stockChart3').getContext('2d');
 
 const stockData = {
-    labels: ['Jan 17', 'Jan 25', 'Feb 1', 'Feb 7', 'Feb 15'], // Example months
+    labels: ['Jan 17', ' ', 'Jan 25', ' ', 'Feb 1', ' ', 'Feb 7', ' ', 'Feb 15'], // Example months
     datasets: [{
         label: '',
-        data: [1224.99, 2424.99, 2724.99, 2524.00, 2824.99],
+        data: [1224.99, 1224.99, 2424.99, 1624.99, 2724.99, 1124.59, 2524.00, 1824.99, 2824.99],
         borderColor: 'rgb(88, 68, 139)',
         backgroundColor: 'rgba(225, 220, 242, 0.4)',
         borderWidth: 2,

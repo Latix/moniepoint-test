@@ -818,11 +818,11 @@
     display: none;
 }
 .chart__overlay {
-    width: 40px;
+    width: 34px;
     height: 150px;
     background: #fff;
     position: absolute;
-    bottom: 20px;
+    bottom: 35px;
 }
 @media(min-width: 768px) {
     .transactions__wrapper-cash-money-stream-item-progress.stripe .transactions__wrapper-cash-money-stream-item-progress-w {
