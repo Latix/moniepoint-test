@@ -242,10 +242,15 @@
     overflow: hidden;
     transition: all 500ms ease-in-out;
 }
+.overview__cards-item {
+    border-bottom: 0 solid rgba(84, 53, 185, 0.4);
+    transition: all 500ms ease-in-out;
+}
 .overview__cards-item.show-chart {
     display: flex;
     width: 700px;
     max-width: 700px;
+    border-bottom: 4px solid rgba(84, 53, 185, 0.4);
 }
 .chart__wrapper {
     position: absolute;

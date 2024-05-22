@@ -7,9 +7,9 @@ const stockData = {
     datasets: [{
         label: '',
         data: [1224.99, 2424.99, 2724.99, 2524.00, 2824.99],
-        borderColor: 'rgba(185, 171, 247)',
-        backgroundColor: 'rgba(185, 171, 247, 0.3)',
-        borderWidth: 1,
+        borderColor: 'rgb(169, 149, 218)',
+        backgroundColor: 'rgba(231, 225, 254, 0.4)',
+        borderWidth: 2,
         fill: true,
         tension: 0
     }]
