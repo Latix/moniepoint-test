@@ -572,6 +572,60 @@
     fill: #ffffff;
     width: 25px;
 }
+.transactions__wrapper-cash-money {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 10px 0;
+}
+.transactions__wrapper-cash-money-item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #b8bcc6;
+}
+.transactions__wrapper-cash-money-item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #b8bcc6;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+.transactions__wrapper-cash-money-item.active::after {
+    background-color: #000;
+    width: 100%;
+    left: 0;
+}
+.transactions__wrapper-cash-money-item > h2 {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.transactions__wrapper-cash-money-item-amount {
+    font-family: "DM Mono", monospace;
+    color: #000;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.transactions__wrapper-cash-money-item > h2,
+.transactions__wrapper-cash-money-item-amount {
+    color: #b8bcc6;
+}
+.transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-amount {
+    color: #000;
+}
+.transactions__wrapper-cash-money-item.active > h2 {
+    color: #000;
+}
 @media(min-width: 1441px) {
     .overview {
         margin-left: auto;
