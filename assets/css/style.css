@@ -572,6 +572,11 @@
     fill: #ffffff;
     width: 25px;
 }
+@media(min-width: 1441px) {
+    .overview {
+        margin-left: auto;
+    }
+}
 /*.overview__cards-item:nth-of-type(2) .overview__cards-item-header-icon {
     display: inline-block;
     background: #d2d6e2;
