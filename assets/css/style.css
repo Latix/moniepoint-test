@@ -937,8 +937,8 @@
     .transactions__wrapper-cash-money-item-amount {
         font-size: 20px;
     }
-    .transactions__wrapper-header-content img {
-        width: 30px;
+    .transactions__wrapper-header-content svg {
+        width: 15px;
         margin-right: 10px;
     }
     .transactions__wrapper  > .transactions__wrapper-recent,
