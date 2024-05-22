@@ -42,7 +42,7 @@
     gap: 20px;
 }
 .navbar__menu-item {
-    color: #666c82;
+    color: #8b90a5;
     padding: 10px;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -85,7 +85,7 @@
 }
 .amount__stream {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
@@ -147,7 +147,7 @@
 }
 .amount__stream-analytics-data {
     font-family: 'Open Sans', sans-serif;
-    color: #666c82;
+    color: #83899e;
     font-weight: 400;
     font-size: 12px;
     display: flex;
@@ -230,7 +230,7 @@
     font-weight: 400;
 }
 .overview__header-date {
-    color: #666c82;
+    color: #63687e;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -277,7 +277,7 @@
     transition: width 0.5s ease, left 0.5s ease;
 }
 .overview__cards-item.show-chart::after  {
-    background-color: rgba(84, 53, 185, 0.4);
+    background-color: rgb(194, 179, 247);
     width: 95%;
     left: 0;
 }
@@ -310,7 +310,7 @@
     opacity: 0;
 }
 .overview__cards-item.show-chart .overview__cards-item-text-info:last-child {
-    color: #cdd1dd;
+    color: #9da0b0;
     opacity: 1;
 }
 .overview__cards-item:nth-of-type(1) .arrow__badge {
@@ -355,7 +355,7 @@
 }
 .overview__cards-item-amount .sub-amount {
     font-size: 20px;
-    color: #b8bcc6;
+    color: #bfc4d1;
 }
 .overview__cards-item-header-icon svg {
     fill: #cdd1dd;
@@ -464,7 +464,7 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 20px;
-    border-bottom: 1px solid #b8bcc6;
+    border-bottom: 1px solid #e7e9ed;
 }
 .transactions__wrapper-header-title {
     display: flex;
@@ -480,7 +480,7 @@
 }
 .transactions__wrapper-header-title span {
     font-family: 'Open Sans', sans-serif;
-    color: #676c77;
+    color: #8d8e95;
     display: inline-block;
     font-weight: 400;
     font-size: 12px;
@@ -503,8 +503,8 @@
 }
 .transactions__wrapper-cash-content-item {
     cursor: pointer;
-    padding: 10px 0;
-    border-bottom: 1px solid #b8bcc6;
+    padding: 5px 0;
+    border-bottom: 1px solid #e7e9ed;
 }
 .transactions__wrapper-cash-content-item-inner {
     display: flex;
@@ -514,8 +514,11 @@
     transition: all 300ms ease-in-out;
 }
 .transactions__wrapper-cash-content-item-inner:hover {
-    background: #F7F8FC;
+    background: #f8f9fc;
     padding: 10px 10px 10px 10px;
+}
+.transactions__wrapper-cash-content-item-inner:hover .transactions__wrapper-cash-content-item-tag {
+    background: #fff;
 }
 .transactions__wrapper-cash-content-item-icon svg {
     width: 25px;
@@ -554,7 +557,7 @@
 }
 .transactions__wrapper-cash-content-item-title-date {
     font-family: 'Open Sans', sans-serif;
-    color: #676c77;
+    color: #aeb0b6;
     display: inline-block;
     font-weight: 400;
     font-size: 12px;
@@ -566,7 +569,7 @@
     font-weight: 400;
     font-size: 12px;
     padding: 5px;
-    background: #f7f8fc;
+    background: #f8f9fc;
 }
 .transactions__wrapper-cash-content-item-amount {
     font-family: "DM Mono", monospace;
@@ -576,14 +579,14 @@
     font-size: 15px;
 }
 .transactions__wrapper-cash-content-item-amount.success {
-    color: #326f63;
+    color: #206359;
 }
-.transactions__wrapper-cash-content-item-amount  .sub-amount {
+.transactions__wrapper-cash-content-item-amount .sub-amount {
     font-size: 12px;
-    opacity: 0.4;
+    color: #909198;
 }
 .transactions__wrapper-cash-content-item-amount.success .sub-amount  {
-    opacity: 0.6;
+    color: #b7d6d1;
 }
 .transactions__wrapper-cash-content-item-icon.dropbox {
     background: #010f47;
@@ -608,7 +611,7 @@
 .transactions__wrapper-cash-money {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 0 0;
+    padding: 30px 0 0 0;
 }
 .transactions__wrapper-cash-money-item {
     display: flex;
@@ -665,7 +668,7 @@
    animation: flipArrow 200ms linear;
 }
 .transactions__wrapper-cash-money-item .transactions__wrapper-cash-money-item-content-icon {
-    background: #b8bcc6;
+    background: #d8dce7;
 }
 .transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-content-icon {
     background: #000;
@@ -685,9 +688,14 @@
     display: flex;
     flex-direction: column;
 }
-.transactions__wrapper-cash-money-item h2,
+.transactions__wrapper-cash-money-item h2 {
+    color: #8a8b92;
+}
 .transactions__wrapper-cash-money-item-amount {
-    color: #b8bcc6;
+    color: #676a78;
+}
+.transactions__wrapper-cash-money-item-amount .sub-amount {
+    color: #c0c4ce;
 }
 .transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-amount {
     color: #000;
@@ -789,8 +797,11 @@
  .overview__cards-item-header-icon .business__savings #secondLayer {
     transition: transform 300ms ease-in-out;
 }
+.overview__cards-item:nth-of-type(3) .overview__cards-item-header-icon .business__savings #firstLayer {
+    fill: #000;
+}
 .overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon .business__savings #firstLayer {
-    fill: #ad90a7;
+    fill: #e269a1;
     transform: translateY(40px);
 }
 .overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon .business__savings #secondLayer {
@@ -805,30 +816,22 @@
 .navbar__logos > img:nth-of-type(2) {
     display: none;
 }
-@media(min-width:768px) {
-    .navbar__menu {
-        display: flex;
-    }
+.chart__overlay {
+    width: 40px;
+    height: 150px;
+    background: #fff;
+    position: absolute;
+    bottom: 20px;
+}
+@media(min-width:820px) {
     .navbar__logos > img:nth-of-type(2) {
         display: block;
     }
-    .navbar-inner {
-        padding: 20px 0;
-    }
     .amount__stream {
         flex-direction: row;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 60px;
-        gap: unset;
-    }
-    .overview {
-        margin-left: 100px;
     }
     .transactions__wrapper {
         flex-direction: row;
-        padding-left: 0;
-        padding-right: 0;
     }
     .transactions__wrapper-cash-content-item-title {
         gap: 20px;
@@ -872,6 +875,32 @@
     }
     .amount__stream-analytics {
         gap: 20px;
+    }
+}
+@media(min-width: 1024px) {
+    .navbar__menu {
+        display: flex;
+    }
+    .amount__stream {
+        align-items: flex-end;
+    }
+}
+@media(min-width: 1440px) {
+    .amount__stream {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 60px;
+        gap: unset;
+    }
+    .navbar-inner {
+        padding: 20px 0;
+    }
+    .overview {
+        margin-left: 100px;
+    }
+    .transactions__wrapper {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 @media(min-width: 1441px) {
