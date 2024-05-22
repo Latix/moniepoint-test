@@ -215,7 +215,7 @@
     font-weight: 400;
 }
 .overview__header-date {
-    color: #fff;
+    color: #666c82;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -400,6 +400,48 @@
 }
 .overview__cards-item:not(:hover) svg  #second-line {
     animation: shrinkDown 500ms forwards;
+}
+.transactions__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1240px;
+    margin: 140px auto 40px auto;
+}
+.transactions__wrapper  > .transactions__wrapper-recent,
+.transactions__wrapper > .transactions__wrapper-cash {
+    flex: 1;
+}
+.transactions__wrapper-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transactions__wrapper-header-title {
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+.transactions__wrapper-header-title span {
+    font-family: 'Open Sans', sans-serif;
+    color: #676c77;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.transactions__wrapper-header .more__link {
+    font-family: 'Open Sans', sans-serif;
+    color: #5e2ff4;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+}
+.transactions__wrapper-header .more__link:hover {
+    text-decoration: underline;
 }
 /*.overview__cards-item:nth-of-type(2) .overview__cards-item-header-icon {
     display: inline-block;
