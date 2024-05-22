@@ -984,21 +984,19 @@
 }
 @keyframes shrinkUp {
     from {
-        transform: scaleX(1);
-        stroke: #A8ABB7;
-        transform-origin: 7px 8px;
+        transform: scaleX(0.5);
+        transform-origin: 18px 8px;
     }
     to {
         transform: scaleX(1);
-        stroke: #A8ABB7;
-        transform-origin: 7px 8px;
+        transform-origin: 18px 8px;
     }
 }
 @keyframes moveLineUp {
     from {
         transform: scaleX(0.5);
         transform-origin: 18px 8px;
-        stroke: #df751f;
+        stroke: #242438;
     }
     to {
         transform: scaleX(1);
@@ -1008,12 +1006,11 @@
 }
 @keyframes shrinkDown {
     from {
-        stroke: #242438;
+        stroke: #df751f;
         transform: scaleX(1);
         transform-origin: 18px 8px;
     }
     to {
-        fill: #000;
         stroke: #242438;
         transform: scaleX(0.5);
         transform-origin: 18px 8px;
