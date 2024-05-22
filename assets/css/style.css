@@ -575,7 +575,7 @@
 .transactions__wrapper-cash-money {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 10px 0;
+    padding: 20px 0 0 0;
 }
 .transactions__wrapper-cash-money-item {
     display: flex;
@@ -625,6 +625,96 @@
 }
 .transactions__wrapper-cash-money-item.active > h2 {
     color: #000;
+}
+.transactions__wrapper-cash-money-stream {
+    padding: 0 20px;
+}
+.transactions__wrapper-cash-money-stream-item {
+    padding-top: 20px;
+}
+.transactions__wrapper-cash-money-stream-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transactions__wrapper-cash-money-stream-item-header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.transactions__wrapper-cash-money-stream-item-header-content > h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 15px;
+}
+.transactions__wrapper-cash-money-stream-item-header-content .cash-badge {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 5px;
+    background: #f7f8fc;
+}
+.transactions__wrapper-cash-money-stream-item-header-amount {
+    font-family: "DM Mono", monospace;
+    color: #000;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 15px;
+}
+.transactions__wrapper-cash-money-stream-item-header-amount .sub-amount {
+    font-size: 12px;
+    opacity: 0.4;
+}
+.transactions__wrapper-cash-money-stream-item-header-content-icon {
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+.transactions__wrapper-cash-money-stream-item-header-content-icon.stripe {
+    background: #b4a4f8;
+}
+.transactions__wrapper-cash-money-stream-item-header-content-icon.crypto {
+    background: #94e2f6;
+}
+.transactions__wrapper-cash-money-stream-item-header-content-icon.wire {
+    background: #f5b8d4;
+}
+.transactions__wrapper-cash-money-stream-item-header-content-icon svg {
+    width: 12px;
+    transform: rotate(180deg);
+}
+.transactions__wrapper-cash-money-stream-item-header-content-icon svg #rect1 {
+    fill: none;
+}
+.transactions__wrapper-cash-money-stream-item-header-content-icon svg #triangle {
+    fill: #fff;
+}
+.transactions__wrapper-cash-money-stream-item-progress {
+    background-image: url('../images/strip_lines.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 8px;
+    margin-top: 10px;
+}
+.transactions__wrapper-cash-money-stream-item-progress.stripe .transactions__wrapper-cash-money-stream-item-progress-w {
+    background: #b4a4f8;
+    height: 8px;
+    animation: loadProgressBarStripe 1s forwards;
+}
+.transactions__wrapper-cash-money-stream-item-progress.crypto .transactions__wrapper-cash-money-stream-item-progress-w {
+    background: #94e2f6;
+    animation: loadProgressBarCrypto 1s forwards;
+    height: 8px;
+}
+.transactions__wrapper-cash-money-stream-item-progress.wire .transactions__wrapper-cash-money-stream-item-progress-w {
+    background: #f5b8d4;
+    animation: loadProgressBarWire 1s forwards;
+    height: 8px;
 }
 @media(min-width: 1441px) {
     .overview {
@@ -689,5 +779,29 @@
         fill: #000;
         transform: scaleX(0.5);
         transform-origin: 7px 8px;
+    }
+}
+@keyframes loadProgressBarStripe {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+}
+@keyframes loadProgressBarCrypto {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20%;
+    }
+}
+@keyframes loadProgressBarWire {
+    from {
+        width: 0;
+    }
+    to {
+        width: 6%;
     }
 }
