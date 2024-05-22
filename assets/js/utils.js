@@ -14,7 +14,6 @@ cardChartIcons.forEach(cardChartIcon => {
         const chartItem = cardChartIcon.parentElement.parentElement.parentElement;
         closeOpenCharts();
         chartItem.classList.add('show-chart');
-        //stockChart.update();
     });
 });
 
