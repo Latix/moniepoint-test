@@ -419,10 +419,16 @@
     justify-content: space-between;
 }
 .transactions__wrapper-header-title {
+    display: flex;
+    align-items: center;
     color: #000000;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 700;
+}
+.transactions__wrapper-header-title img {
+    width: 30px;
+    margin-right: 10px;
 }
 .transactions__wrapper-header-title span {
     font-family: 'Open Sans', sans-serif;
