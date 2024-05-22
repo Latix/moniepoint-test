@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 .navbar__logos {
     display: flex;
@@ -37,7 +37,7 @@
     margin: 0 auto;
 }
 .navbar__menu {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 20px;
 }
@@ -84,9 +84,17 @@
     background: #060a1f;
 }
 .amount__stream {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
     max-width: 1240px;
     margin: 0 auto;
-    padding-top: 60px;
 }
 .amount__stream-balance-title {
     font-family: 'Open Sans', sans-serif;
@@ -99,7 +107,7 @@
 .amount__stream-balance-amount-text {
     font-family: "DM Mono", monospace;
     color: #fff;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 400;
     margin-right: 20px;
 }
@@ -125,15 +133,10 @@
     width: 12px;
     transform: rotate(90deg);
 }
-.amount__stream {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
 .amount__stream-analytics {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 .amount__stream-analytics a {
     text-decoration: none;
@@ -180,7 +183,6 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    height: 34px;
 }
 .amount__stream-analytics-add svg {
     fill: #fff;
@@ -199,7 +201,7 @@
 .overview {
     max-width: 1440px;
     margin: 0 auto;
-    margin-left: 100px;
+    margin-left: 10px;
     margin-top: 40px;
     padding-bottom: 10px;
 }
@@ -247,7 +249,7 @@
 .overview__cards-item {
     position: relative;
     background: #fff;
-    padding: 30px;
+    padding: 20px;
     width: 400px;
     max-width: 400px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -443,6 +445,9 @@
 }
 .transactions__wrapper {
     display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
     justify-content: space-between;
     align-items: baseline;
     gap: 40px;
@@ -452,6 +457,7 @@
 .transactions__wrapper  > .transactions__wrapper-recent,
 .transactions__wrapper > .transactions__wrapper-cash {
     flex: 1;
+    width: 100%;
 }
 .transactions__wrapper-header {
     display: flex;
@@ -468,9 +474,9 @@
     font-size: 16px;
     font-weight: 700;
 }
-.transactions__wrapper-header-content  img {
-    width: 30px;
-    margin-right: 10px;
+.transactions__wrapper-header-content img {
+    width: 20px;
+    margin-right: 5px;
 }
 .transactions__wrapper-header-title span {
     font-family: 'Open Sans', sans-serif;
@@ -517,15 +523,15 @@
 .transactions__wrapper-cash-content-item-title {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 .transactions__wrapper-cash-content-item-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     background: #091f39;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 .transactions__wrapper-cash-content-item-icon.stripe {
     background: #091f39;
@@ -551,7 +557,7 @@
     color: #676c77;
     display: inline-block;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
 }
 .transactions__wrapper-cash-content-item-tag {
     font-family: 'Open Sans', sans-serif;
@@ -559,7 +565,7 @@
     display: inline-block;
     font-weight: 400;
     font-size: 12px;
-    padding: 10px;
+    padding: 5px;
     background: #f7f8fc;
 }
 .transactions__wrapper-cash-content-item-amount {
@@ -640,14 +646,14 @@
     color: #000;
     display: inline-block;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 5px;
 }
 .transactions__wrapper-cash-money-item-content {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding-left: 20px;
+    gap: 10px;
+    padding-left: 10px;
 }
 .transactions__wrapper-cash-money-item-content-icon {
     padding: 10px;
@@ -690,7 +696,7 @@
     color: #000;
 }
 .transactions__wrapper-cash-money-stream {
-    padding: 0 20px;
+    padding: 0 10px;
 }
 .transactions__wrapper-cash-money-stream-item {
     padding-top: 20px;
@@ -796,9 +802,82 @@
 .overview__cards-item:nth-of-type(1):hover .overview__cards-item-header-icon.business svg #layer1 {
     fill: #5e2ff4;
 }
+.navbar__logos > img:nth-of-type(2) {
+    display: none;
+}
+@media(min-width:768px) {
+    .navbar__menu {
+        display: flex;
+    }
+    .navbar__logos > img:nth-of-type(2) {
+        display: block;
+    }
+    .navbar-inner {
+        padding: 20px 0;
+    }
+    .amount__stream {
+        flex-direction: row;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 60px;
+        gap: unset;
+    }
+    .overview {
+        margin-left: 100px;
+    }
+    .transactions__wrapper {
+        flex-direction: row;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .transactions__wrapper-cash-content-item-title {
+        gap: 20px;
+    }
+    .transactions__wrapper-cash-content-item-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .transactions__wrapper-cash-content-item-title-date {
+        font-size: 14px;
+    }
+    .amount__stream-balance-amount-text {
+        font-size: 45px;
+    }
+    .transactions__wrapper-cash-content-item-tag {
+        padding: 10px;
+    }
+    .transactions__wrapper-cash-money-stream {
+        padding: 0 20px;
+    }
+    .transactions__wrapper-cash-money-item-content {
+        gap: 20px;
+        padding-left: 20px;
+    }
+    .transactions__wrapper-cash-money-item-amount {
+        font-size: 20px;
+    }
+    .transactions__wrapper-header-content img {
+        width: 30px;
+        margin-right: 10px;
+    }
+    .transactions__wrapper  > .transactions__wrapper-recent,
+    .transactions__wrapper > .transactions__wrapper-cash {
+        flex: 1;
+    }
+    .overview__cards-item {
+        padding: 30px;
+    }
+    .amount__stream-analytics-add {
+        height: 34px;
+    }
+    .amount__stream-analytics {
+        gap: 20px;
+    }
+}
 @media(min-width: 1441px) {
     .overview {
         margin-left: auto;
+        max-width: 1240px;
     }
 }
 /*.overview__cards-item:nth-of-type(2) .overview__cards-item-header-icon {
