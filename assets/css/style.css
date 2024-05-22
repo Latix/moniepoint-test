@@ -781,7 +781,7 @@
 }
 .transactions__wrapper-cash-money-stream-item-progress.stripe .transactions__wrapper-cash-money-stream-item-progress-w {
     background: #b4a4f8;
-    height: 8px;
+    height: 6px;
     animation: loadProgressBarStripe 1s forwards;
 }
 .transactions__wrapper-cash-money-stream-item-progress.crypto .transactions__wrapper-cash-money-stream-item-progress-w {
@@ -823,6 +823,11 @@
     background: #fff;
     position: absolute;
     bottom: 20px;
+}
+@media(min-width: 768px) {
+    .transactions__wrapper-cash-money-stream-item-progress.stripe .transactions__wrapper-cash-money-stream-item-progress-w {
+        height: 8px;
+    }
 }
 @media(min-width:820px) {
     .navbar__logos > img:nth-of-type(2) {
