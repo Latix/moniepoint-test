@@ -426,19 +426,25 @@
     width: 20px;
     margin-top: 50px;
 }
-.overview__cards-item:hover svg  #first-line {
+.overview__cards-item:hover svg.tax__reserve  #firstLayer {
+    animation: switchBackgroundHover 500ms forwards;
+}
+.overview__cards-item:hover svg.tax__reserve  #secondLayer {
     animation: moveLineDown 500ms forwards;
 }
-.overview__cards-item:hover svg  #second-line {
+.overview__cards-item:hover svg  #thirdLayer {
     animation: moveLineUp 500ms forwards;
 }
 .overview__cards-item:hover svg  #wrap-line {
     animation: wrapLineHover 500ms forwards;
 }
-.overview__cards-item:not(:hover) svg  #first-line {
+.overview__cards-item:not(:hover) svg.tax__reserve  #firstLayer {
+     animation: switchBackground 500ms forwards;
+}
+.overview__cards-item:not(:hover) svg.tax__reserve  #secondLayer {
     animation: shrinkUp 500ms forwards;
 }
-.overview__cards-item:not(:hover) svg  #second-line {
+.overview__cards-item:not(:hover) svg  #thirdLayer {
     animation: shrinkDown 500ms forwards;
 }
 .overview__cards-item:not(:hover) svg #wrap-line {
@@ -948,47 +954,69 @@
       opacity: 1; 
     }
 }
-@keyframes moveLineDown {
+@keyframes switchBackground {
     from {
-        transform: scaleX(2);
-        transform-origin: 7px 8px;
+        fill: #D5DAE4;
     }
     to {
+        fill: #D5DAE4;
+    }
+}
+@keyframes switchBackgroundHover {
+    from {
+        fill: #D5DAE4;
+    }
+    to {
+        fill: #fcdabf;
+    }
+}
+@keyframes moveLineDown {
+    from {
         transform: scaleX(1);
-        transform-origin: 7px 8px;
+        transform-origin: 18px 8px;
+        stroke: #A8ABB7;
+    }
+    to {
+        transform: scaleX(0.5);
+        transform-origin: 18px 8px;
+        stroke: #fcdabf;
     }
 }
 @keyframes shrinkUp {
     from {
         transform: scaleX(1);
+        stroke: #A8ABB7;
         transform-origin: 7px 8px;
     }
     to {
-        transform: scaleX(2);
+        transform: scaleX(1);
+        stroke: #A8ABB7;
         transform-origin: 7px 8px;
     }
 }
 @keyframes moveLineUp {
     from {
-        fill: #000;
         transform: scaleX(0.5);
-        transform-origin: 7px 8px;
+        transform-origin: 18px 8px;
+        stroke: #df751f;
     }
     to {
-        fill: orange;
         transform: scaleX(1);
-        transform-origin: 7px 8px;
+        transform-origin: 18px 8px;
+        stroke: #df751f;
     }
 }
 @keyframes shrinkDown {
     from {
+        stroke: #242438;
         transform: scaleX(1);
-        transform-origin: 7px 8px;
+        transform-origin: 18px 8px;
     }
     to {
         fill: #000;
+        stroke: #242438;
         transform: scaleX(0.5);
-        transform-origin: 7px 8px;
+        transform-origin: 18px 8px;
     }
 }
 @keyframes loadProgressBarStripe {
