@@ -1102,7 +1102,7 @@
 }
 @keyframes businessSavingsDefault {
     from {
-        fill: #D8DBE6;
+        fill: #fce0ed;
     }
     to {
         fill: #D8DBE6;
@@ -1118,7 +1118,7 @@
 }
 @keyframes businessSavingsLayer1Default {
     from {
-        fill: #fff;
+        fill: #facde1;
     }
     to {
         fill: #fff;
