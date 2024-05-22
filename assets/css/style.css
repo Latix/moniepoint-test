@@ -802,17 +802,37 @@
 }
  .overview__cards-item-header-icon .business__savings #firstLayer,
  .overview__cards-item-header-icon .business__savings #secondLayer {
-    transition: transform 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.overview__cards-item:nth-of-type(3) .overview__cards-item-header-icon svg.business__savings #bg {
+    animation: businessSavingsDefault 500ms forwards;
+}
+.overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon svg.business__savings #bg {
+    animation: businessSavingsHover 500ms forwards;
 }
 .overview__cards-item:nth-of-type(3) .overview__cards-item-header-icon .business__savings #firstLayer {
-    fill: #000;
+    animation: businessSavingsLayer1Default 500ms forwards;
+}
+.overview__cards-item:nth-of-type(3) .overview__cards-item-header-icon .business__savings #secondLayer {
+    animation: businessSavingsLayer2Default 500ms forwards;
+}
+.overview__cards-item:nth-of-type(3) .overview__cards-item-header-icon .business__savings #thirdLayer {
+    animation: businessSavingsLayer3Default 500ms forwards;
+}
+.overview__cards-item:nth-of-type(3) .overview__cards-item-header-icon .business__savings #fourthLayer {
+    animation: businessSavingsLayer4Default 500ms forwards;
 }
 .overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon .business__savings #firstLayer {
-    fill: #e269a1;
-    transform: translateY(40px);
+    animation: businessSavingsLayer1Hover 500ms forwards;
 }
 .overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon .business__savings #secondLayer {
-    transform: translateY(20px);
+    animation: businessSavingsLayer2Hover 500ms forwards;
+}
+.overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon .business__savings #thirdLayer {
+    animation: businessSavingsLayer3Hover 500ms forwards;
+}
+.overview__cards-item:nth-of-type(3):hover .overview__cards-item-header-icon .business__savings #fourthLayer {
+    animation: businessSavingsLayer4Hover 500ms forwards;
 }
 .overview__cards-item:nth-of-type(1) .overview__cards-item-header-icon.business svg #layer1 {
     transition: all 300ms ease-in-out;
@@ -1014,6 +1034,94 @@
         stroke: #242438;
         transform: scaleX(0.5);
         transform-origin: 18px 8px;
+    }
+}
+@keyframes businessSavingsDefault {
+    from {
+        fill: #D8DBE6;
+    }
+    to {
+        fill: #D8DBE6;
+    }
+}
+@keyframes businessSavingsHover {
+    from {
+        fill: #D8DBE6;
+    }
+    to {
+        fill: #fce0ed;
+    }
+}
+@keyframes businessSavingsLayer1Default {
+    from {
+        fill: #fff;
+    }
+    to {
+        fill: #fff;
+    }
+}
+@keyframes businessSavingsLayer1Hover {
+    from {
+        fill: #fff;
+    }
+    to {
+        fill: #facde1;
+    }
+}
+@keyframes businessSavingsLayer2Default {
+    from {
+        fill: #fff;
+        transform: translateY(5px);
+    }
+    to {
+        fill: #fff;
+        transform: translateY(0);
+    }
+}
+@keyframes businessSavingsLayer2Hover {
+    from {
+        fill: #fff;
+        transform: translateY(0);
+    }
+    to {
+        fill: #facde1;
+        transform: translateY(5px);
+    }
+}
+@keyframes businessSavingsLayer3Default {
+    from {
+        fill: #fff;
+        transform: translateY(8px);
+    }
+    to {
+        fill: #fff;
+        transform: translateY(0);
+    }
+}
+@keyframes businessSavingsLayer3Hover {
+    from {
+        fill: #fff;
+        transform: translateY(0);
+    }
+    to {
+        fill: #db659d;
+        transform: translateY(8px);
+    }
+}
+@keyframes businessSavingsLayer4Default {
+    from {
+        fill: #060A23;
+    }
+    to {
+        fill: #060A23;
+    }
+}
+@keyframes businessSavingsLayer4Hover {
+    from {
+        fill: #060A23;
+    }
+    to {
+        fill: #fff;
     }
 }
 @keyframes loadProgressBarStripe {
