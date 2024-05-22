@@ -417,7 +417,7 @@
 .transactions__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 40px;
     max-width: 1240px;
     margin: 140px auto 40px auto;
