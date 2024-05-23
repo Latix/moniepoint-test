@@ -696,9 +696,12 @@
     align-items: center;
     border-radius: 50%;
 }
-.transactions__wrapper-cash-money-item:hover .transactions__wrapper-cash-money-item-content .arrowIcon {
-   animation: flipArrow 200ms linear;
+.transactions__wrapper-cash-money-item.active:hover .transactions__wrapper-cash-money-item-content .arrowIcon {
+   animation: flipArrowDown 200ms linear;
 }
+.transactions__wrapper-cash-money-item:not(.active):hover .transactions__wrapper-cash-money-item-content .arrowIcon {
+    animation: flipArrowUp 200ms linear;
+ }
 .transactions__wrapper-cash-money-item:hover .transactions__wrapper-cash-money-item-content .curveIcon {
     animation: shrinkCashCurve 500ms forwards;
     transition-delay: 1s;
@@ -1257,7 +1260,7 @@
         width: 6%;
     }
 }
-@keyframes flipArrow {
+@keyframes flipArrowDown {
     from {
         transform: translateY(-100%);
     }
@@ -1269,6 +1272,20 @@
     }
     100% {
         transform: translateY(0);
+    }
+}
+@keyframes flipArrowUp {
+    from {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-80%);
+    }
+    80% {
+        transform: translateY(-40%);
+    }
+    100% {
+        transform: translateY(-100%);
     }
 }
 @keyframes shrinkCashCurve {
