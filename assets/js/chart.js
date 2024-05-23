@@ -46,6 +46,9 @@ const config = {
         scales: {
             x: {
                 type: 'category',
+                ticks: {
+                    color: '#d4d4d9',
+                },
                 min: 'Jan 25',
                 max: 'Feb 15',
                 display: true,
