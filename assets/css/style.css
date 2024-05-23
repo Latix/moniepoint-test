@@ -975,7 +975,10 @@
         gap: 20px;
     }
     .transactions__wrapper-header-content img {
-        width: 22px;
+        width: 25px;
+    }
+    .transactions__wrapper-header-content svg {
+        width: 20px;
     }
 }
 @media(min-width: 1024px) {
