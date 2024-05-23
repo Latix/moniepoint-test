@@ -951,13 +951,13 @@
     }
     .amount__stream-analytics .divider,
     .amount__stream-analytics .amount__stream-analytics-more {
+        display: flex;
+    }
+    .navbar__logos > img:nth-of-type(2) {
         display: block;
     }
 }
 @media(min-width:820px) {
-    .navbar__logos > img:nth-of-type(2) {
-        display: block;
-    }
     .amount__stream {
         flex-direction: row;
     }
