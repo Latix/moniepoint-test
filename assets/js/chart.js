@@ -8,7 +8,7 @@ function formatAmount(amount) {
     numericString = numericString.split(".");
     var amountNumericString = numericString[0];
     var cents = numericString[1];
-    // Convert the numeric string to a number
+    
     var numericValue = parseInt(amountNumericString);
 
     // Convert the number to a string with commas and append the dollar sign
