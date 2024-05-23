@@ -29,7 +29,7 @@ const data = {
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: '#5e3fd3',
-        pointHoverBorderWidth: 3,
+        pointHoverBorderWidth: 2.5,
         borderWidth: 1,
         tension: 0.1
     }]
