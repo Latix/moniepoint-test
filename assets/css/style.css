@@ -484,7 +484,7 @@
     align-items: baseline;
     gap: 40px;
     max-width: 1240px;
-    margin: 180px auto 40px auto;
+    margin: 140px auto 40px auto;
 }
 .transactions__wrapper  > .transactions__wrapper-recent,
 .transactions__wrapper > .transactions__wrapper-cash {
@@ -760,6 +760,9 @@
 .transactions__wrapper-cash-money-item-amount .sub-amount {
     color: #c0c4ce;
 }
+.transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-amount .sub-amount {
+    color: #909198;
+}
 .transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-amount {
     color: #000;
 }
@@ -964,6 +967,7 @@
     }
     .transactions__wrapper {
         flex-direction: row;
+        margin: 180px auto 40px auto;
     }
     .transactions__wrapper-cash-content-item-title {
         gap: 20px;
