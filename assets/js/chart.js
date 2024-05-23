@@ -8,7 +8,7 @@ function formatAmount(amount) {
     numericString = numericString.split(".");
     var amountNumericString = numericString[0];
     var cents = numericString[1];
-    
+
     var numericValue = parseInt(amountNumericString);
 
     // Convert the number to a string with commas and append the dollar sign
@@ -28,7 +28,8 @@ const data = {
         pointBackgroundColor: '#5e3fd3',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: '#5e3fd3'
+        pointHoverBorderColor: '#5e3fd3',
+        borderWidth: 1
     }]
 };
 
@@ -36,6 +37,40 @@ const config = {
     type: 'line',
     data: data,
     options: {
+        interaction: {
+            mode: 'index',
+            intersect: false
+        },
+        /*onHover: function(event, chartElement) {
+            var chart = this;
+            var datasetIndex = chartElement[0]?.datasetIndex;
+            var index = chartElement[0]?.index;
+
+            if (datasetIndex !== undefined && index !== undefined) {
+                var meta = chart.getDatasetMeta(datasetIndex);
+                var xScale = meta.xScale;
+                var yScale = meta.yScale;
+                var xValue = xScale.getValueForPixel(event.x);
+                var yValue = chart.data.datasets[datasetIndex].data[index];
+
+                // Draw a vertical line at the hovered point
+                chart.ctx.beginPath();
+                chart.ctx.moveTo(xScale.getPixelForValue(xValue), yScale.top);
+                chart.ctx.lineTo(xScale.getPixelForValue(xValue), yScale.bottom);
+                chart.ctx.lineWidth = 1;
+                chart.ctx.strokeStyle = 'rgb(115, 95, 159)';
+                chart.ctx.stroke();
+            }
+        },
+        onLeave: function(event, chartElement) {
+            var chart = this;
+
+            // Clear the canvas
+            chart.ctx.clearRect(0, 0, chart.width, chart.height);
+            
+            // Redraw the chart
+            chart.update();
+        },*/
         responsive: true,
         scales: {
             x: {
