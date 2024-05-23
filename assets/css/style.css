@@ -80,7 +80,7 @@
     gap: 20px;
 }
 .main__content {
-    height: 380px;
+    height: 360px;
     background: #060a1f;
 }
 .amount__stream {
@@ -1009,6 +1009,9 @@
     }
     .overview__cards-item-amount {
         font-size: 40px;
+    }
+    .main__content {
+        height: 380px;
     }
 }
 @media(min-width: 1024px) {
