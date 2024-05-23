@@ -351,15 +351,23 @@
     transform: rotate(180deg);
 }
 .overview__cards-item-amount {
+    display: flex;
     font-family: "DM Mono", monospace;
     color: #000;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 400;
     margin-right: 20px;
     margin-top: 20px;
     opacity: 1;
     transform: translateY(0);
     transition: all 300ms linear;
+}
+.overview__cards-item.show-chart .overview__cards-item-amount {
+    gap: 10px;
+}
+.overview__cards-item.show-chart .overview__cards-item-amount .dollar-prefix {
+    font-size: 17px;
+    margin-top: 7px;
 }
 .overview__cards-item:hover .overview__cards-item-amount  {
     opacity: 0;
@@ -690,7 +698,8 @@
 .transactions__wrapper-cash-money-item:hover .transactions__wrapper-cash-money-item-content .arrowIcon {
    animation: flipArrow 200ms linear;
 }
-.transactions__wrapper-cash-money-item:nth-of-type(2) .transactions__wrapper-cash-money-item-content .arrowIcon{
+.transactions__wrapper-cash-money-item:nth-of-type(2) .transactions__wrapper-cash-money-item-content .arrowIcon,
+.transactions__wrapper-cash-money-item:nth-of-type(2):hover .transactions__wrapper-cash-money-item-content .arrowIcon {
     transform: rotate(180deg) translateY(17px);
     transform-origin: inherit;
 }
@@ -701,7 +710,8 @@
 .transactions__wrapper-cash-money-item-content svg circle {
     fill: #D6D9E4;
 }
-.transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-content svg circle {
+.transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-content svg circle,
+.transactions__wrapper-cash-money-item:hover .transactions__wrapper-cash-money-item-content svg circle {
     fill: #151B30;
 }
 .transactions__wrapper-cash-money-item-content svg {
