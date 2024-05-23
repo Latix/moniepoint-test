@@ -714,12 +714,12 @@
     animation: shrinkCashCurveActive 2s forwards;
     transition-delay: 1s;
 }
-.transactions__wrapper-cash-money-item:nth-of-type(2) .transactions__wrapper-cash-money-item-content .arrowIcon,
-.transactions__wrapper-cash-money-item:nth-of-type(2):hover .transactions__wrapper-cash-money-item-content .arrowIcon {
+.transactions__wrapper-cash-money-item:not(.active) .transactions__wrapper-cash-money-item-content .arrowIcon,
+.transactions__wrapper-cash-money-item:not(.active):hover .transactions__wrapper-cash-money-item-content .arrowIcon {
     transform: rotate(180deg) translateY(17px);
     transform-origin: inherit;
 }
-.transactions__wrapper-cash-money-item:nth-of-type(2).active .transactions__wrapper-cash-money-item-content .arrowIcon{
+.transactions__wrapper-cash-money-item.active .transactions__wrapper-cash-money-item-content .arrowIcon {
     transform: rotate(0) translateY(0);
     transform-origin: inherit;
 }
