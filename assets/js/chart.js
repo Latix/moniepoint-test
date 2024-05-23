@@ -30,8 +30,8 @@ const data = {
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: '#5e3fd3',
         pointHoverBorderWidth: 2.5,
-        borderWidth: 1,
-        tension: 0.1
+        borderWidth: 1
+        // tension: 0.1
     }]
 };
 
@@ -44,6 +44,23 @@ const config = {
             intersect: false
         },
         responsive: true,
+        maintainAspectRatio: false,
+        animation: {
+            duration: 0
+        },
+        elements: {
+            line: {
+                tension: 0.1
+            }
+        },
+        layout: {
+            padding: {
+                left: 10,
+                right: 10,
+                top: 30,
+                bottom: 10
+            }
+        },
         scales: {
             x: {
                 type: 'category',
