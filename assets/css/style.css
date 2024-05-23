@@ -284,13 +284,17 @@
 .chart__wrapper {
     position: absolute;
     opacity: 0;
+    flex: 1;
+}
+#stockChart {
+    width: 100%;
 }
 .overview__cards-item.show-chart .chart__wrapper  {
     position: relative;
     opacity: 1;
 }
 .overview__cards-item-content {
-    width: 100%;
+    /*width: 100%;*/
 }
 .overview__cards-item .arrow__badge > svg {
     width: 12px;
