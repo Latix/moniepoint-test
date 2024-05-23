@@ -698,6 +698,16 @@
 .transactions__wrapper-cash-money-item:hover .transactions__wrapper-cash-money-item-content .arrowIcon {
    animation: flipArrow 200ms linear;
 }
+.transactions__wrapper-cash-money-item:hover .transactions__wrapper-cash-money-item-content .curveIcon {
+    animation: shrinkCashCurve 500ms forwards;
+}
+.transactions__wrapper-cash-money-item.active:hover .transactions__wrapper-cash-money-item-content .curveIcon {
+    animation: shrinkCashCurveHover 500ms forwards;
+}
+.transactions__wrapper-cash-money-item:active .transactions__wrapper-cash-money-item-content .curveIcon {
+    animation: shrinkCashCurveActive 2s forwards;
+    transition-delay: 1s;
+}
 .transactions__wrapper-cash-money-item:nth-of-type(2) .transactions__wrapper-cash-money-item-content .arrowIcon,
 .transactions__wrapper-cash-money-item:nth-of-type(2):hover .transactions__wrapper-cash-money-item-content .arrowIcon {
     transform: rotate(180deg) translateY(17px);
@@ -1242,5 +1252,35 @@
     }
     100% {
         transform: translateY(0);
+    }
+}
+@keyframes shrinkCashCurve {
+    from {
+        stroke: #fff;
+        stroke-width: 0;
+    }
+    to {
+        stroke: #000;
+        stroke-width: 2;
+    }
+}
+@keyframes shrinkCashCurveHover {
+    from {
+        stroke: #fff;
+        stroke-width: 0;
+    }
+    to {
+        stroke: #fff;
+        stroke-width: 5;
+    }
+}
+@keyframes shrinkCashCurveActive {
+    from {
+        stroke: #fff;
+        stroke-width: 4;
+    }
+    to {
+        stroke: #fff;
+        stroke-width: 0;
     }
 }
