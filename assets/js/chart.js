@@ -25,10 +25,11 @@ const data = {
         fill: true,
         borderColor: '#5e3fd3',
         backgroundColor: 'rgba(94, 63, 211, 0.1)',
-        pointBackgroundColor: '#5e3fd3',
+        // pointBackgroundColor: '#5e3fd3',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: '#5e3fd3',
+        pointHoverBorderWidth: 3,
         borderWidth: 1,
         tension: 0.1
     }]
