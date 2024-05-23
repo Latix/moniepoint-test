@@ -701,6 +701,7 @@
 }
 .transactions__wrapper-cash-money-item:hover .transactions__wrapper-cash-money-item-content .curveIcon {
     animation: shrinkCashCurve 500ms forwards;
+    transition-delay: 1s;
 }
 .transactions__wrapper-cash-money-item.active:hover .transactions__wrapper-cash-money-item-content .curveIcon {
     animation: shrinkCashCurveHover 500ms forwards;
