@@ -37,10 +37,6 @@ const config = {
     type: 'line',
     data: data,
     options: {
-        interaction: {
-            mode: 'index',
-            intersect: false
-        },
         /*onHover: function(event, chartElement) {
             var chart = this;
             var datasetIndex = chartElement[0]?.datasetIndex;
