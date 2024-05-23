@@ -915,6 +915,10 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.transactions__wrapper-header-content svg {
+    width: 15px;
+    margin-right: 10px;
+}
 @media(min-width: 768px) {
     .transactions__wrapper-cash-money-stream-item-progress.stripe .transactions__wrapper-cash-money-stream-item-progress-w {
         height: 8px;
@@ -955,10 +959,6 @@
     }
     .transactions__wrapper-cash-money-item-amount {
         font-size: 20px;
-    }
-    .transactions__wrapper-header-content svg {
-        width: 15px;
-        margin-right: 10px;
     }
     .transactions__wrapper  > .transactions__wrapper-recent,
     .transactions__wrapper > .transactions__wrapper-cash {
