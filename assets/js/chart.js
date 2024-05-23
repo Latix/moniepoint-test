@@ -138,8 +138,15 @@ const config = {
                     const position = context.chart.canvas.getBoundingClientRect();
       
                     tooltipEl.style.opacity = 1;
-                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
-                    tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                    // Calculate the horizontal position to center the tooltip
+                    const tooltipWidth = tooltipEl.offsetWidth;
+                    const tooltipX = position.left + window.pageXOffset + tooltipModel.caretX - (tooltipWidth / 2);
+                    tooltipEl.style.left = `${tooltipX}px`;
+
+                    // Calculate the vertical position to place the tooltip at the top
+                    const tooltipHeight = tooltipEl.offsetHeight;
+                    const tooltipY = position.top + window.pageYOffset + tooltipModel.caretY - tooltipHeight - 10; // Adding some offset (10px) above the circle
+                    tooltipEl.style.top = `${tooltipY}px`;
                 }
             }
         }
