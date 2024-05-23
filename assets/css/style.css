@@ -974,6 +974,9 @@
     .amount__stream-analytics {
         gap: 20px;
     }
+    .transactions__wrapper-header-content img {
+        width: 22px;
+    }
 }
 @media(min-width: 1024px) {
     .navbar__menu {
