@@ -885,58 +885,6 @@
     position: relative;
     opacity: 1;
 }
-/*.overview__cards-item:nth-of-type(1) .overview__cards-item-header-icon.business svg#default {
-    position: relative;
-    opacity: 1;/
-}
-.overview__cards-item:nth-of-type(1) .overview__cards-item-header-icon.business svg#hover {
-    position: absolute;
-    opacity: 0;
-}
-.overview__cards-item:nth-of-type(1):hover .overview__cards-item-header-icon.business svg#default {
-    position: absolute;
-    opacity: 0;
-}
-.overview__cards-item:nth-of-type(1):hover .overview__cards-item-header-icon.business svg#hover {
-    position: relative;
-    opacity: 1;
-}*/
-/*@keyframes businessDefaultDef {
-    from {
-        position: relative;
-        opacity: 1;
-    }
-    to {
-        position: relative;
-        opacity: 1;
-    }
-}
-@keyframes businessDefHover {
-    from {
-        position: relative;
-        opacity: 1;
-    }
-    to {
-        position: relative;
-        opacity: 1;
-    }
-}
-@keyframes businessHover {
-    from {
-        position: relative;
-        opacity: 1;
-    }
-    to {
-        position: relative;
-        opacity: 1;
-    }
-}
-@keyframes businessHovHover {
-    
-}*/
-/*.overview__cards-item:nth-of-type(1):hover .overview__cards-item-header-icon.business svg #layer1 {
-    fill: #5e2ff4;
-}*/
 .navbar__logos > img:nth-of-type(2) {
     display: none;
 }
@@ -946,6 +894,11 @@
     background: #fff;
     position: absolute;
     bottom: 35px;
+}
+#myChart {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 @media(min-width: 768px) {
     .transactions__wrapper-cash-money-stream-item-progress.stripe .transactions__wrapper-cash-money-stream-item-progress-w {
