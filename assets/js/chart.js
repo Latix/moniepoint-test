@@ -29,7 +29,8 @@ const data = {
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: '#5e3fd3',
-        borderWidth: 1
+        borderWidth: 1,
+        tension: 0.1
     }]
 };
 
@@ -37,6 +38,10 @@ const config = {
     type: 'line',
     data: data,
     options: {
+        interaction: {
+            mode: 'index',
+            intersect: false
+        },
         /*onHover: function(event, chartElement) {
             var chart = this;
             var datasetIndex = chartElement[0]?.datasetIndex;

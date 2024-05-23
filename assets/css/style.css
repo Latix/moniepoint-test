@@ -265,7 +265,6 @@
     display: flex;
     width: 700px;
     max-width: 700px;
-    /* border-bottom: 4px solid rgba(84, 53, 185, 0.4); */
 }
 .overview__cards-item::after {
     content: '';
@@ -287,6 +286,7 @@
 .chart__wrapper {
     position: absolute;
     opacity: 0;
+    display: none;
     flex: 1;
 }
 #stockChart {
@@ -294,6 +294,7 @@
 }
 .overview__cards-item.show-chart .chart__wrapper  {
     position: relative;
+    display: block;
     opacity: 1;
 }
 .overview__cards-item-content {
