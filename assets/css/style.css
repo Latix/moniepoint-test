@@ -329,6 +329,7 @@
 .overview__cards-item.show-chart .overview__cards-item-text-info:last-child {
     color: #9da0b0;
     opacity: 1;
+    margin-left: 5px;
 }
 .overview__cards-item:nth-of-type(1) .arrow__badge {
     display: inline-block;
