@@ -296,6 +296,9 @@
     position: relative;
     opacity: 1;
 }
+.overview__cards-item-content {
+    white-space: nowrap;
+}
 .overview__cards-item-text {
     display: flex;
     align-items: baseline;
