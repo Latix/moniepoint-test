@@ -281,6 +281,9 @@
     width: 97%;
     left: 0;
 }
+.overview__cards-item {
+    display: flex;
+}
 .chart__wrapper {
     position: absolute;
     opacity: 0;
@@ -293,8 +296,13 @@
     position: relative;
     opacity: 1;
 }
-.overview__cards-item-content {
-    /*width: 100%;*/
+.overview__cards-item-text {
+    display: flex;
+    align-items: baseline;
+}
+.overview__cards-item-text .arrow__badge {
+    margin-right: 5px;
+    margin-left: 5px;
 }
 .overview__cards-item .arrow__badge > svg {
     width: 12px;
